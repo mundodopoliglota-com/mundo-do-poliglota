@@ -1,0 +1,58 @@
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+.wp-block-site-title a {
+    color: inherit;
+}
+
+.wp-block-group {
+    box-sizing: border-box;
+}
+
+:where(.wp-block-group.has-background) {
+    padding: 1.25em 2.375em;
+}
+
+.wp-block-navigation .wp-block-navigation-item__label {
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.wp-block-navigation .wp-block-navigation-item__description {
+    display: none;
+}
+
+#scroll-top-container {
+    position: fixed;
+    display: none;
+    bottom: 20%;
+    right: 20px;
+    z-index: 999;
+}
+
+#scroll-top-button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border-style: hidden;
+    justify-content: center;
+    padding: 10px;
+    background-color: #d4d7da;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#scroll-top-button svg {
+    width: 24px;
+    height: 24px;
+}
