@@ -1,18 +1,9 @@
-window.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById("scroll-top-container");
-    const button = document.getElementById("scroll-top-button");
+const toggleBtn = document.querySelector('.toggle-btn');
+const toggleBtnIcon = document.querySelector('.toggle-btn i');
+const dropDownMenu = document.querySelector('.dropdown-menu');
 
-    window.addEventListener("scroll", () => {
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-        if (scrollPercent >= 15) {
-            container.style.display = "block";
-        } else {
-            container.style.display = "none";
-        }
-    });
-
-    button.addEventListener("click", () => {
-        window.scroll({ top: 0, behavior: "smooth" });
-    });
-});
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
+    toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+};
