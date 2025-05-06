@@ -226,6 +226,44 @@ section#video h2 {
   text-align: center;
 }
 
+/* COACHING */
+.coaching-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.coaching-section-text,
+.coaching-section-image {
+  flex: 1;
+  max-width: 50%;
+  border: 1px solid #C26148;
+}
+
+.coaching-section-text {
+  justify-content: center;
+  text-align: left;
+  padding: 2rem;
+}
+
+.coaching-section-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.coaching-section-text h2 {
+  margin-bottom: 10px;
+}
+
+.coaching-section-text p {
+  margin-bottom: 20px;
+}
+
+.coaching-section-text a {
+  color: #fff;
+}
+
 /* RESPONSIVE */
 @media (max-width: 780px) {
   .nav-bar .links,
