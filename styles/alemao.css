@@ -1,0 +1,834 @@
+html {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EBE8E6;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== Botões ===== */
+.botao {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+}
+
+.botao--inscricao {
+  border: 0.3rem solid #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 2rem 9rem;
+  font-size: 1.6rem;
+}
+
+.botao-rodape {
+  background-color: #DD0000;
+  color: #FFFFFF;
+  width: 40%;
+  font-size: 3rem;
+  padding: 2rem 0;
+  border-radius: 5px;
+}
+
+/* ===== Seções Semânticas Gerais ===== */
+section,
+header,
+footer {
+  width: 100%;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #FDFDFD;
+}
+
+.nav-bar {
+  background: #FDFDFD;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar .logo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1D1F25;
+  padding-left: 2rem;
+}
+
+.nav-bar .youtube {
+  padding-right: 2rem;
+}
+
+.nav-bar .links {
+  font-size: 18px;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-bar .toggle-btn {
+  display: none;
+  font-size: 3rem;
+  color: #1D1F25;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header .logo a{
+    font-size: 2.5rem;
+  }
+
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  height: 0;
+  right: 2rem;
+  width: 100px;
+  background-color: rgba(253, 253, 253, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+  height: 110px;
+}
+
+.dropdown-menu li {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #F7F7F7;
+  display: flex;
+  padding: 0.3rem;
+  align-items: center;
+}
+
+
+/* ===== Seção Hero ===== */
+.secao-hero {
+  position: relative;
+  background: url('/imagens/PAGE-ALEMAO/alemanha.jpg') no-repeat center/cover fixed;
+  display: flex;
+  align-items: center;
+  padding: 7.5rem 0;
+  min-height: 80vh;
+}
+
+.secao-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.secao-hero .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.language-switcher {
+  position: fixed;
+  left: 3rem;
+  bottom: 3rem;
+  z-index: 3000;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.language-switcher button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FDFDFD;
+  cursor: pointer;
+  padding: 0;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 32px;
+  height: 22px;
+  transition: box-shadow 0.2s;
+}
+
+.language-switcher img:hover {
+  box-shadow: 0 0 6px #aaa;
+}
+
+.secao-hero__subtitulo,
+.secao-hero__titulo,
+.secao-hero__descricao {
+  color: #FFFFFF;
+}
+
+.secao-hero__subtitulo {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.secao-hero .secao-hero__titulo{
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+.secao-hero__descricao {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  
+}
+
+/* ===== Seção Vídeo ===== */
+.secao-video {
+  background-color: #F7F7F7;
+  padding: 7.5rem 0;
+  text-align: center;
+}
+
+.secao-video__titulo {
+  font-size: 2.2rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.secao-video__player {
+  width: 80%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.div-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+}
+
+.div-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.secao-video__texto {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  font-size: 1.7rem;
+}
+
+.secao-video__coluna {
+  flex: 1;
+  max-width: 38%;
+  text-align: left;
+}
+
+.secao-video__coluna p {
+  margin-bottom: 1.5rem;
+  color: #979797;
+}
+
+/* ===== Seção Detalhes ===== */
+.secao-detalhes {
+  background-color: #FFFFFF;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.secao-detalhes__titulo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 3rem;
+}
+
+.sessao-descritiva {
+  display: flex;
+  flex-direction: column;
+}
+
+.sessao-descritiva section {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sessao-descritiva section img {
+  flex-shrink: 0;
+  width: 90%;
+  max-width: 400px;
+  padding: 0 6rem;
+}
+
+.sessao-descritiva section .container {
+  flex: 1;
+  text-align: left;
+}
+
+.secao-fundamentos,
+.secao-aprofundamento,
+.secao-consolidacao {
+  background-color: #FFFFFF;
+  padding: 5rem 0;
+}
+
+#secao-aprofundamento {
+  background-color: #F7F7F7;
+}
+
+.secao-fundamentos__etiqueta,
+.secao-aprofundamento__etiqueta,
+.secao-consolidacao__etiqueta {
+  font-size: 1.9rem;
+  color: #9E9E9E;
+  margin-bottom: 1rem;
+}
+
+.secao-fundamentos__titulo,
+.secao-aprofundamento__titulo,
+.secao-consolidacao__titulo {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222222;
+  
+}
+
+.secao-fundamentos__texto,
+.secao-aprofundamento__texto,
+.secao-consolidacao__texto {
+  font-size: 1.8rem;
+  color: #979797;
+  line-height: 1.6;
+  margin-left: 2rem;
+}
+
+/* ===== Seção Promoção ===== */
+.secao-promocao {
+  position: relative;
+  background: url('/imagens/PAGE-ALEMAO/foto-higor.jpg') no-repeat center/cover fixed;
+  background-position: 50% 30.8812px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40vh;
+}
+
+#secao-promocao::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 126, 179, 0.7);
+  z-index: 1;
+}
+
+.secao-promocao-container {
+  position: relative;
+  z-index: 2;
+}
+
+.secao-promocao-items {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 10rem;
+  margin-top: 5rem;
+  padding: 0 10rem;
+}
+
+.secao-promocao-etiqueta {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+  color: #d0e3f0;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.secao-promocao-titulo {
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+
+.botao-promocao {
+  background-color: transparent;
+  width: 80%;
+  color: #FFFFFF;
+  font-size: 17px;
+  padding: 20px 60px;
+  border: solid 3px #FFFFFF;
+}
+
+.botao-promocao:hover {
+  background-color: transparent;
+  width: 80%;
+  color: #FFFFFF;
+  font-size: 17px;
+  padding: 20px 60px;
+  border: solid 3px #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Seção Convite ===== */
+.secao-convite {
+  background-color: #FFFFFF;
+  padding: 7.5rem 0;
+  text-align: center;
+}
+
+.secao-convite__titulo {
+  font-size: 4rem;
+}
+
+/* ===== Seções Informações e Benefícios ===== */
+.secao-informacoes,
+.secao-beneficios {
+  background-color: #FFFFFF;
+  padding: 5rem 0;
+  
+}
+
+.three-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+  
+}
+
+.secao-informacoes__coluna,
+.secao-beneficios__coluna {
+  flex: 1;
+  min-width: 28rem;
+}
+
+.secao-informacoes__coluna h3,
+.secao-beneficios__coluna h3 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.secao-informacoes__coluna p,
+.secao-beneficios__coluna p {
+  font-size: 1.9rem;
+  text-align: center;
+  color:#979797;
+  }
+
+/* ===== Descrição Alemanha ===== */
+.descricao_alemanha {
+  background-color: #1D1F25;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.descricao_alemanha img {
+  width: 80px;
+  margin-bottom: 4rem;
+}
+
+.descricao_alemanha p {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.descricao_alemanha strong {
+  display: block;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  margin-top: 4rem;
+}
+
+/* ===== Seção Rodapé ===== */
+.secao-rodape {
+  background-color: #FFFFFF;
+  padding: 5rem 0 7.5rem;
+  text-align: center;
+}
+
+.secao-rodape-chamada {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.secao-rodape-promo {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  margin-right: 5rem;
+  bottom: 2rem;
+  z-index: 2000;
+  background: #1D1F25;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: opacity 0.3s;
+}
+
+#back-to-top:active {
+  background: #333;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+
+  .secao-video__texto {
+    display: flex;
+    font-size: 2.2rem;
+    
+  }
+
+  .secao-video__coluna {
+    max-width: 39%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+
+  .botao--inscricao {
+    padding: 2.5rem 6rem;
+    font-size: 3.5rem;
+    border: solid 3px white;
+    margin-top: 3rem;
+  }
+
+  .secao-video__player {
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+
+  .secao-detalhes__titulo {
+    padding: 0 5rem 0 5rem;
+  }
+
+  .nav-bar .links,
+  .nav-bar .toggle-btn {
+    display: none;
+    padding-right: 2rem;
+  }
+
+  .nav-bar .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+
+ .secao-hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .secao-promocao__etiqueta {
+    font-size: 3.5rem;
+  }
+
+  #secao-rodape .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secao-rodape-chamada {
+    width: 80%;
+    font-size: 3rem;
+    box-sizing: border-box;
+  }
+
+  .secao-rodape-promo {
+    width: 80%;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+ .sessao-descritiva section {
+    flex-direction: column;
+  }
+
+  .sessao-descritiva section img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .secao-fundamentos,
+  .secao-aprofundamento,
+  .secao-consolidacao {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:0;
+   }
+
+   .secao-fundamentos__etiqueta,
+   .secao-aprofundamento__etiqueta,
+   .secao-consolidacao__etiqueta {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform:capitalize;
+   }
+
+   .secao-fundamentos__texto,
+   .secao-aprofundamento__texto,
+   .secao-consolidacao__texto {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0 4rem 10rem 4rem;
+   }
+
+   .secao-fundamentos__titulo,
+   .secao-aprofundamento__titulo,
+   .secao-consolidacao__titulo {
+    text-align: center;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .three-columns {
+    flex-direction: column;
+  }
+
+  .secao-informacoes__coluna p {
+    padding: 2rem 5rem 0 5rem;
+    font-size: 2.5rem;
+  }
+
+  .secao-beneficios__coluna p{
+    padding: 2rem 5rem 0 5rem;
+    font-size: 2.5rem;
+  }
+
+  .descricao_alemanha {
+    text-align: center;
+  }
+
+  .descricao_alemanha img {
+    width: 60px;
+    margin-bottom: 3rem;
+  }
+
+  .descricao_alemanha p {
+    font-size: 2.5rem;
+    padding: 0 6rem 0 6rem;
+  }
+
+  .descricao_alemanha strong {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0 3rem 0 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 6px;
+  }
+
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #FDFDFD;
+  }
+
+  .nav-bar .links,
+  .nav-bar .toggle-btn {
+    display: none;
+    padding-right: 2rem;
+  }
+
+  .nav-bar .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+
+  #secao-rodape .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .secao-rodape-chamada {
+    width: 80%;
+    font-size: 3rem;
+    box-sizing: border-box;
+  }
+
+  .secao-rodape-promo {
+    width: 80%;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .sessao-descritiva .container {
+    width: 80%;
+  }
+
+  .secao-promocao .secao-promocao-container {
+    width: 80%;
+  }
+
+  .secao-promocao-items {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+  .secao-promocao-etiqueta {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  .secao-promocao-titulo {
+    font-size: 26px;
+    font-weight: normal;
+  }
+
+  .botao-promocao {
+    width: 80%;
+    padding: 2rem 0;
+  }
+
+  .botao-rodape {
+    font-size: 18px;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .secao-hero__titulo {
+    font-size: 3.5rem;
+  }
+
+  #secao-video .container {
+    width: 80%;
+  }
+
+  .three-columns {
+    width: 80%;
+  }
+
+  .secao-convite {
+    padding: 2.5rem 0;
+  }
+
+  .secao-convite .container {
+    width: 80%;
+  }
+
+  .secao-video__player {
+    width: 80%;
+  }
+
+  .div-video {
+    padding-bottom: 56.25%;
+  }
+}
