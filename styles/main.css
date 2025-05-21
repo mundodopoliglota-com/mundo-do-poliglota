@@ -817,16 +817,6 @@ section#video h2 {
   }
 }
 
-#customers-sub-desc-finish a {
-  background-color: #cc8f80;
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-#customers-sub-desc-finish a:hover {
-  background-color: #e67c62;
-}
-
 .footer {
   background-color: #EBE8E6;
   color: #1D1F25;
