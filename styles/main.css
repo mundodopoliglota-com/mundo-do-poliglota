@@ -896,16 +896,24 @@ section#video h2 {
   background: #FDFDFD;
   cursor: pointer;
   padding: 0;
-  display: block;
   border-radius: 3px;
   border: 1px solid #ccc;
   width: 32px;
   height: 22px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.language-switcher button img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 24px;
+  height: 16px;
+  object-fit: contain;
 }
 
 .language-switcher img:hover {
   box-shadow: 0 0 6px #aaa;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
